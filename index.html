@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планировщик задач Т-Банк - Авторизация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Основной контейнер -->
+    <div class="main-container">
+        <!-- Блок с темой и информацией -->
+        <div class="project-info">
+            <h1 class="project-title">Планировщик задач в приложении Т-Банк</h1>
+            <p class="project-description">
+                Инновационный модуль для умного планирования повседневных задач с автоматическим подбором сервисов-партнеров 
+                и системой кэшбэка до 5%. Интегрирован в экосистему Т-Банка для повышения удобства и вовлеченности пользователей.
+            </p>
+        </div>
+
+        <!-- Блок авторизации -->
+        <div class="auth-container">
+            <div class="auth-card">
+                <!-- Иконка авторизации -->
+                <div class="auth-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                
+                <h2>Авторизация</h2>
+                <p class="auth-subtitle">Войдите для доступа к системе планирования</p>
+
+                <form id="loginForm" class="auth-form">
+                    <!-- Поле Email -->
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="kamalievaliya@yandex.ru" required>
+                    </div>
+
+                    <!-- Поле Пароль -->
+                    <div class="input-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
+                    </div>
+
+                    <!-- Кнопка Вход -->
+                    <button type="submit" class="login-btn">Вход</button>
+                </form>
+
+                <div class="auth-links">
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ссылки на страницы (скрыты до авторизации) -->
+    <div id="pageLinks" class="page-links" style="display: none;">
+        <a href="page2.html" class="page-link">2</a>
+        <a href="page3.html" class="page-link">3</a>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email && password) {
+                // ИСПРАВЛЕНИЕ: используем sessionStorage вместо localStorage
+                sessionStorage.setItem('authenticated', 'true');
+                document.getElementById('pageLinks').style.display = 'flex';
+                alert('Авторизация успешна! Теперь доступны страницы 2 и 3');
+            } else {
+                alert('Пожалуйста, заполните все поля');
+            }
+        });
+
+        window.addEventListener('load', function() {
+            // ИСПРАВЛЕНИЕ: проверяем sessionStorage вместо localStorage
+            if (sessionStorage.getItem('authenticated') === 'true') {
+                document.getElementById('pageLinks').style.display = 'flex';
+            } else {
+                // Дополнительно: скрываем ссылки если не авторизован
+                document.getElementById('pageLinks').style.display = 'none';
+                // Очищаем поля формы
+                document.getElementById('email').value = '';
+                document.getElementById('password').value = '';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница 2 - Полная информация о системе</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <div class="main-container">
+        <!-- Заголовок страницы -->
+        <div class="project-info">
+            <h1 class="project-title">Полная информация о системе</h1>
+            <p class="project-description">
+                Детальное описание модуля "Планировщик задач" для мобильного приложения Т-Банк
+            </p>
+        </div>
+
+        <!-- Раздел Планирование -->
+        <div class="content-section">
+            <h2 class="section-title">Планирование</h2>
+            
+            <!-- Тема -->
+            <div class="info-card">
+                <h3 class="card-title">Тема</h3>
+                <div class="card-content">
+                    <p>Разработка модуля "Планировщик задач" в мобильном приложении Т-Банка с интеграцией партнерских сервисов и системой кэшбэка. Инновационное решение для автоматизации повседневных задач пользователей.</p>
+                </div>
+            </div>
+
+            <!-- Цели -->
+            <div class="info-card">
+                <h3 class="card-title">Цели</h3>
+                <div class="card-content">
+                    <ul>
+                        <li>Повышение удобства и вовлеченности пользователей за счет индивидуального подхода</li>
+                        <li>Увеличение эффективности использования продуктов компании</li>
+                        <li>Создание персонализированных рекомендаций на основе автоматизации процессов</li>
+                        <li>Увеличение общего объема транзакций и вовлеченности в экосистему банка</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Задачи -->
+            <div class="info-card">
+                <h3 class="card-title">Задачи</h3>
+                <div class="card-content">
+                    <ul>
+                        <li>Создание интуитивного интерфейса для управления задачами</li>
+                        <li>Интеграция с API сервисов-партнеров (доставка, такси, билеты, отели)</li>
+                        <li>Разработка системы автоматического подбора релевантных сервисов</li>
+                        <li>Реализация механизма кэшбэка 5% за выполненные задачи</li>
+                        <li>Обеспечение безопасности и защиты пользовательских данных</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Целевая аудитория -->
+            <div class="info-card">
+                <h3 class="card-title">Целевая аудитория</h3>
+                <div class="card-content">
+                    <div class="audience-grid">
+                        <div class="audience-item">
+                            <span class="audience-value">53%</span>
+                            <span class="audience-label">20-29 лет</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-value">30%</span>
+                            <span class="audience-label">Студенты</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-value">37%</span>
+                            <span class="audience-label">Наемные работники</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-value">33%</span>
+                            <span class="audience-label">Владельцы бизнеса</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SWOT-анализ -->
+            <div class="info-card">
+                <h3 class="card-title">SWOT-анализ</h3>
+                <div class="card-content">
+                    <div class="swot-grid">
+                        <div class="swot-item strength">
+                            <h4>Сильные стороны</h4>
+                            <ul>
+                                <li>Интеграция в экосистему банка</li>
+                                <li>Большая база лояльных пользователей</li>
+                                <li>Уникальное торговое предложение</li>
+                            </ul>
+                        </div>
+                        <div class="swot-item weakness">
+                            <h4>Слабые стороны</h4>
+                            <ul>
+                                <li>Зависимость от партнеров</li>
+                                <li>Риск нерелевантных рекомендаций</li>
+                            </ul>
+                        </div>
+                        <div class="swot-item opportunity">
+                            <h4>Возможности</h4>
+                            <ul>
+                                <li>Расширение аудитории</li>
+                                <li>Привлечение молодой аудитории</li>
+                            </ul>
+                        </div>
+                        <div class="swot-item threat">
+                            <h4>Угрозы</h4>
+                            <ul>
+                                <li>Жесткая конкуренция на рынке</li>
+                                <li>Крупные агрегаторы (Яндекс.Услуги, СберУслуги)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Диаграммы -->
+            <div class="info-card">
+                <h3 class="card-title">Диаграммы</h3>
+                <div class="card-content">
+                    <p>Система включает следующие ключевые диаграммы:</p>
+                    <ul>
+                        <li>Use-case диаграмма пользовательских сценариев</li>
+                        <li>Диаграмма классов системы</li>
+                        <li>Диаграмма компонентов архитектуры</li>
+                        <li>Диаграмма развертывания системы</li>
+                        <li>Диаграмма пакетов модулей</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Раздел Разработка -->
+        <div class="content-section">
+            <h2 class="section-title">Разработка</h2>
+            
+            <div class="info-card">
+                <div class="card-content">
+                    <p><strong>Технологический стек:</strong></p>
+                    <ul>
+                        <li>Frontend: React Native</li>
+                        <li>Backend: Java Spring</li>
+                        <li>База данных: PostgreSQL 14+</li>
+                        <li>Архитектура: Микросервисная</li>
+                        <li>API: RESTful</li>
+                    </ul>
+                    
+                    <p><strong>Основные модули:</strong></p>
+                    <ul>
+                        <li>Модуль управления задачами</li>
+                        <li>Модуль интеграции с партнерами</li>
+                        <li>Модуль кэшбэка</li>
+                        <li>Модуль уведомлений</li>
+                        <li>Модуль администратора</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Раздел Тестирование -->
+        <div class="content-section">
+            <h2 class="section-title">Тестирование</h2>
+            
+            <div class="info-card">
+                <div class="card-content">
+                    <p><strong>Этапы тестирования:</strong></p>
+                    <ul>
+                        <li>Юзабилити-тестирование с фокус-группами</li>
+                        <li>Функциональное тестирование всех модулей</li>
+                        <li>Интеграционное тестирование API партнеров</li>
+                        <li>Нагрузочное тестирование системы</li>
+                        <li>Тестирование безопасности и защиты данных</li>
+                    </ul>
+                    
+                    <p><strong>Критерии успеха:</strong></p>
+                    <ul>
+                        <li>95% пользователей успешно создают задачу с первой попытки</li>
+                        <li>Среднее время создания задачи - не более 90 секунд</li>
+                        <li>Рейтинг удовлетворенности не ниже 4.5/5</li>
+                        <li>Не более 5% пользователей совершают критические ошибки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Раздел Внедрение -->
+        <div class="content-section">
+            <h2 class="section-title">Внедрение</h2>
+            
+            <div class="info-card">
+                <div class="card-content">
+                    <p><strong>План внедрения:</strong></p>
+                    <ul>
+                        <li><strong>Этап 1 (1-2 месяца):</strong> Разработка MVP с базовым функционалом</li>
+                        <li><strong>Этап 2 (2-3 месяца):</strong> Расширение функциональности и интеграций</li>
+                        <li><strong>Этап 3 (3-4 месяца):</strong> Масштабирование и продвижение</li>
+                        <li><strong>Этап 4 (постоянно):</strong> Поддержка и оптимизация</li>
+                    </ul>
+                    
+                    <p><strong>Пилотное внедрение:</strong></p>
+                    <ul>
+                        <li>Тестирование на фокус-группе из 100-200 пользователей</li>
+                        <li>Интеграция с 2-3 ключевыми партнерами (Яндекс.Еда, Яндекс.Такси)</li>
+                        <li>Сбор обратной связи и доработка системы</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Навигация -->
+        <div class="navigation-section">
+            <a href="index.html" class="nav-btn">На главную</a>
+            <a href="#" onclick="logout()" class="nav-btn logout-btn">Выйти</a>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            sessionStorage.removeItem('authenticated');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

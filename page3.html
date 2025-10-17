@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница 3 - Архитектура</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+        // ИСПРАВЛЕНИЕ: проверяем sessionStorage
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <header>
+        <h1>Страница 3 - Архитектура</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#" onclick="logout()">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Архитектура системы</h2>
+            <!-- Ваш контент здесь -->
+        </section>
+    </main>
+
+    <script>
+        function logout() {
+            // ИСПРАВЛЕНИЕ: удаляем из sessionStorage
+            sessionStorage.removeItem('authenticated');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

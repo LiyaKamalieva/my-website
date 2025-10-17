@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000; /* Черный текст */
+    background: linear-gradient(135deg, #b19cd9 0%, #ffb6c1 100%); /* Сиреневый -> Розовый */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Блок с темой проекта */
+.project-info {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.project-title {
+    color: #000000; /* Черный */
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.project-description {
+    color: #000000; /* Черный */
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Блок авторизации */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.auth-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #b19cd9 0%, #9370db 100%); /* Нежно-сиреневый */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.auth-icon svg {
+    stroke-width: 1.5;
+}
+
+.auth-card h2 {
+    color: #000000; /* Черный */
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.auth-subtitle {
+    color: #000000; /* Черный */
+    margin-bottom: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000; /* Черный */
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e6e6fa; /* Светло-сиреневый */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: #fff;
+    color: #000000; /* Черный текст в инпутах */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #9370db; /* Сиреневый */
+    box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #666; /* Темно-серый для плейсхолдеров */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%); /* Сиреневый градиент */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
+}
+
+.auth-links {
+    margin-top: 20px;
+}
+
+.forgot-password {
+    color: #9370db; /* Сиреневый */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #7b68ee; /* Более яркий сиреневый */
+    text-decoration: underline;
+}
+
+/* Ссылки на страницы */
+.page-links {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.page-link {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #000000; /* Черный */
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #9370db; /* Сиреневый */
+    border-radius: 50%;
+    transition: all 0.3s;
+    background: white;
+}
+
+.page-link:hover {
+    background: #9370db; /* Сиреневый */
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-container {
+        gap: 20px;
+    }
+    
+    .project-title {
+        font-size: 24px;
+    }
+    
+    .project-description {
+        font-size: 14px;
+    }
+    
+    .auth-container {
+        padding: 0 10px;
+    }
+    
+    .auth-card {
+        padding: 30px 20px;
+    }
+    
+    .page-links {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+    }
+    
+    .page-link {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-info {
+        padding: 20px 15px;
+    }
+    
+    .project-title {
+        font-size: 20px;
+    }
+    
+    .auth-card h2 {
+        font-size: 20px;
+    }
+}
