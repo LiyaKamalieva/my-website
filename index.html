@@ -18,10 +18,10 @@
             </p>
         </div>
 
-        <!-- Блок авторизации -->
+        <!-- авторизация -->
         <div class="auth-container">
             <div class="auth-card">
-                <!-- Иконка авторизации -->
+                <!-- иконка авт -->
                 <div class="auth-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -33,19 +33,19 @@
                 <p class="auth-subtitle">Войдите для доступа к системе планирования</p>
 
                 <form id="loginForm" class="auth-form">
-                    <!-- Поле Email -->
+                    <!-- Email -->
                     <div class="input-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="kamalievaliya@yandex.ru" required>
                     </div>
 
-                    <!-- Поле Пароль -->
+                    <!-- Пароль -->
                     <div class="input-group">
                         <label for="password">Пароль</label>
                         <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
                     </div>
 
-                    <!-- Кнопка Вход -->
+                    <!-- Вход -->
                     <button type="submit" class="login-btn">Вход</button>
                 </form>
 
@@ -70,7 +70,7 @@
             const password = document.getElementById('password').value;
             
             if (email && password) {
-                // ИСПРАВЛЕНИЕ: используем sessionStorage вместо localStorage
+                
                 sessionStorage.setItem('authenticated', 'true');
                 document.getElementById('pageLinks').style.display = 'flex';
                 alert('Авторизация успешна! Теперь доступны страницы 2 и 3');
@@ -80,7 +80,7 @@
         });
 
         window.addEventListener('load', function() {
-            // ИСПРАВЛЕНИЕ: проверяем sessionStorage вместо localStorage
+            
             if (sessionStorage.getItem('authenticated') === 'true') {
                 document.getElementById('pageLinks').style.display = 'flex';
             } else {

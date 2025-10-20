@@ -35,14 +35,14 @@ body {
 }
 
 .project-title {
-    color: #000000; /* Черный */
+    color: #000000; 
     font-size: 32px;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 .project-description {
-    color: #000000; /* Черный */
+    color: #000000; 
     font-size: 16px;
     line-height: 1.6;
     max-width: 600px;
@@ -83,13 +83,13 @@ body {
 }
 
 .auth-card h2 {
-    color: #000000; /* Черный */
+    color: #000000; 
     margin-bottom: 10px;
     font-size: 24px;
 }
 
 .auth-subtitle {
-    color: #000000; /* Черный */
+    color: #000000;
     margin-bottom: 30px;
     font-size: 14px;
     opacity: 0.8;
@@ -106,7 +106,7 @@ body {
 .input-group label {
     display: block;
     margin-bottom: 8px;
-    color: #000000; /* Черный */
+    color: #000000; 
     font-weight: 500;
     font-size: 14px;
 }
@@ -187,7 +187,7 @@ body {
     height: 45px;
     line-height: 45px;
     text-align: center;
-    color: #000000; /* Черный */
+    color: #000000; 
     text-decoration: underline;
     font-weight: bold;
     font-size: 18px;
