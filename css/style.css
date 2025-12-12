@@ -331,3 +331,142 @@ body {
         font-size: 20px;
     }
 }
+
+/* Стили для второй страницы */
+.content-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-title {
+    color: #000000;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #9370db;
+    padding-bottom: 8px;
+}
+
+.card-content {
+    color: #000000;
+    line-height: 1.6;
+}
+
+.card-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.card-content li {
+    margin-bottom: 8px;
+}
+
+/* Сетка для SWOT-анализа */
+.swot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.swot-item {
+    padding: 15px;
+    border-radius: 10px;
+    color: #000000;
+}
+
+.swot-item h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.strength {
+    background: rgba(144, 238, 144, 0.3);
+    border-left: 4px solid green;
+}
+
+.weakness {
+    background: rgba(255, 182, 193, 0.3);
+    border-left: 4px solid red;
+}
+
+.opportunity {
+    background: rgba(173, 216, 230, 0.3);
+    border-left: 4px solid blue;
+}
+
+.threat {
+    background: rgba(255, 165, 0, 0.3);
+    border-left: 4px solid orange;
+}
+
+/* Навигационные кнопки */
+.navigation-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.nav-btn {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
+}
+
+.logout-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+}
+
+/* Адаптивность для второй страницы */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .swot-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navigation-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
