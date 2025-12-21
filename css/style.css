@@ -1,125 +1,361 @@
-/* ===== RESET ===== */
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
+/* ====== BASE ====== */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #b19cd9, #ffb6c1);
+  line-height: 1.6;
+  color: #000;
+  background: linear-gradient(135deg, #b19cd9 0%, #ffb6c1 100%);
   min-height: 100vh;
-}
 
-/* ===== ЛОГИКА ВАЖНАЯ =====
-   На главной (index) центрируем карточку.
-   На page2/page3 НЕ центрируем, там обычная страница со скроллом.
-*/
-body:not(.page2):not(.page3) {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   padding: 20px;
 }
 
-body.page2,
-body.page3 {
-  padding: 20px;
-}
-
-/* ===== CONTAINER ===== */
 .main-container {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* ===== HEADER ===== */
+/* ====== PAGE LINKS (кнопки снизу справа) ====== */
+.page-links {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  display: flex;
+  gap: 15px;
+
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 25px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.page-link {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+
+  text-align: center;
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 18px;
+
+  border: 2px solid #9370db;
+  border-radius: 50%;
+  background: #fff;
+
+  transition: all 0.3s;
+}
+
+.page-link:hover {
+  background: #9370db;
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* ====== PAGE 1: PROJECT INFO ====== */
+.project-info {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.project-title {
+  color: #000;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.project-description {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ====== PAGE 1: AUTH ====== */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.auth-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #b19cd9 0%, #9370db 100%);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+}
+
+.auth-icon svg {
+  stroke-width: 1.5;
+}
+
+.auth-card h2 {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.auth-subtitle {
+  color: #000;
+  margin-bottom: 30px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.auth-form {
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+
+  border: 2px solid #e6e6fa;
+  border-radius: 8px;
+
+  font-size: 16px;
+  transition: all 0.3s;
+  background: #fff;
+  color: #000;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #9370db;
+  box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #666;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+
+  background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
+  color: #fff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
+}
+
+.auth-links {
+  margin-top: 20px;
+}
+
+.forgot-password {
+  color: #9370db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #7b68ee;
+  text-decoration: underline;
+}
+
+/* ====== PAGE 2/3: WHITE WRAPPER ====== */
+.content-wrapper {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+/* Header блока */
 .page-header {
   background: #fff;
   padding: 30px;
-  border-radius: 16px;
-  text-align: center;
+  border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .page-title {
+  color: #000;
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-weight: 700;
 }
 
 .page-subtitle {
+  color: #000;
   font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* ===== CONTENT WRAPPER ===== */
-.content-wrapper {
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
+/* ====== SECTIONS / CARDS ====== */
 .content-section {
   margin-bottom: 30px;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 26px;
+  color: #000;
+  font-size: 28px;
   margin-bottom: 20px;
+  text-align: center;
   font-weight: 700;
 }
 
 .info-card {
-  margin-bottom: 30px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
-/* ===== DIAGRAMS ===== */
+.card-title {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #9370db;
+  padding-bottom: 8px;
+}
+
+.card-content {
+  color: #000;
+  line-height: 1.6;
+}
+
+.card-content ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.card-content li {
+  margin-bottom: 8px;
+}
+
+/* ====== DIAGRAMS (ВАЖНОЕ) ====== */
 .screenshots-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
+  margin-top: 15px;
+  align-items: start;
 }
 
+/* Чтобы НЕ резало подписи:
+   - height: auto
+   - object-fit: contain
+   - padding даёт "воздух", если подпись впритык к краям */
 .screenshot {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  padding: 12px;
-  background: #fff;
-  border-radius: 12px;
-  border: 2px solid #e6e6fa;
+    width: 100%;
+    height: auto;           /* НЕ фиксируем высоту */
+    object-fit: contain;    /* НЕ обрезаем */
+    padding: 12px;          /* чтобы подписи не упирались в край */
+    background: #fff;
+    border-radius: 8px;
+    border: 2px solid #e6e6fa;
 }
 
-/* ===== SWOT ===== */
+
+.screenshot:hover {
+  transform: scale(1.03);
+  border-color: #9370db;
+}
+
+/* ====== SWOT GRID ====== */
+/* ====== SWOT (в оттенках сайта) ====== */
 .swot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  margin-top: 15px;
 }
 
 .swot-item {
-  background: #faf8ff;
-  border: 2px solid #e6e6fa;
-  border-left: 4px solid #9370db;
-  border-radius: 12px;
   padding: 20px;
+  border-radius: 12px;
+  color: #000;
+  border: 2px solid #e6e6fa;
+  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.10);
 }
 
 .swot-item h4 {
-  color: #5a4ea3;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 700;
+  color: #5a4ea3;
+  border-bottom: 1px solid #dcd6f7;
+  padding-bottom: 6px;
 }
 
 .swot-item ul {
-  padding-left: 18px;
+  margin-left: 18px;
 }
 
 .swot-item li {
@@ -127,17 +363,19 @@ body.page3 {
   line-height: 1.5;
 }
 
-/* лёгкие оттенки без “светофора” */
-.strength { background: #f6f4ff; border-left-color: #9370db; }
-.weakness { background: #fff4f7; border-left-color: #b19cd9; }
-.opportunity { background: #f4f8ff; border-left-color: #9370db; }
-.threat { background: #fff7f2; border-left-color: #b19cd9; }
+/* мягкие оттенки вместо “светофора” */
+.strength { background: #f6f4ff; border-left: 4px solid #9370db; }
+.weakness { background: #fff4f7; border-left: 4px solid #b19cd9; }
+.opportunity { background: #f4f8ff; border-left: 4px solid #9370db; }
+.threat { background: #fff7f2; border-left: 4px solid #b19cd9; }
 
-/* ===== 4P ===== */
+
+/* ====== 4P анализ ====== */
 .p4-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
+  margin-top: 15px;
 }
 
 .p4-item {
@@ -145,57 +383,155 @@ body.page3 {
   border: 2px solid #e6e6fa;
   border-radius: 12px;
   padding: 20px;
-}
-
-.p4-item h4 {
-  margin-top: 6px;
-  margin-bottom: 10px;
-  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.10);
 }
 
 .p4-badge {
   display: inline-block;
-  background: #f6f4ff;
-  color: #5a4ea3;
-  font-size: 12px;
-  font-weight: 700;
   padding: 6px 10px;
   border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: #f6f4ff;
+  border: 1px solid #dcd6f7;
+  color: #5a4ea3;
+  margin-bottom: 10px;
 }
 
-/* ===== NAVIGATION ===== */
+.p4-item h4 {
+  margin: 6px 0 10px;
+  font-weight: 700;
+  color: #000;
+}
+
+.p4-item p {
+  margin-bottom: 10px;
+}
+
+.p4-item ul {
+  margin-left: 18px;
+}
+
+.p4-item li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+
+/* ====== NAV BUTTONS ====== */
 .navigation-section {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .nav-btn {
-  background: linear-gradient(135deg, #9370db, #b19cd9);
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
   color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px;
+
   text-decoration: none;
-  font-weight: 700;
+  border-radius: 8px;
+
+  font-weight: 600;
+  transition: all 0.3s;
+
+  border: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
 }
 
 .logout-btn {
-  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  .screenshots-grid {
-    grid-template-columns: 1fr;
+  .main-container {
+    gap: 20px;
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .auth-container {
+    padding: 0 10px;
+  }
+
+  .auth-card {
+    padding: 30px 20px;
   }
 
   .content-wrapper {
     padding: 20px;
   }
 
-  .page-header {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .info-card {
     padding: 20px;
   }
+
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-btn {
+    width: 200px;
+    text-align: center;
+  }
+
+  .page-links {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px;
+  }
+
+  .page-link {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  .screenshot {
+    height: auto;
+  }
+
+
+
 }
+
+@media (max-width: 480px) {
+  .project-info {
+    padding: 20px 15px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .auth-card h2 {
+    font-size: 20px;
+  }
+}
+
