@@ -626,3 +626,161 @@ body.page2 .main-container {
   }
 }
 
+/* ====== TESTING: REVIEWS PANEL ====== */
+.reviews-panel {
+  border: 1px solid #ece8ff;
+  background: #ffffff;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.review-card {
+  background: #faf8ff;
+  border: 2px solid #e6e6fa;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.review-meta {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 13px;
+  color: #5a4ea3;
+  background: #f3efff;
+  border: 1px solid #e6e6fa;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  color: #000;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.reviews-note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e6e6fa;
+  font-size: 14px;
+}
+
+/* adaptive */
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== мягкий SWOT (без ядовитых цветов) ====== */
+.soft-swot .swot-item{
+  background: #faf8ff;
+  border: 2px solid #e6e6fa;
+  border-left: 6px solid #b19cd9;
+}
+
+.soft-swot .swot-item h4{
+  color: #5a4ea3;
+}
+
+/* ====== Roadmap (этапы) ====== */
+.roadmap{
+  display: grid;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.roadmap-step{
+  background: #faf8ff;
+  border: 2px solid #e6e6fa;
+  border-left: 6px solid #9370db;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.roadmap-head{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.roadmap-title{
+  font-weight: 700;
+  color: #2a2350;
+}
+
+.roadmap-dates{
+  font-size: 13px;
+  color: #5a4ea3;
+  background: #f3efff;
+  border: 1px solid #e6e6fa;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.roadmap-list{
+  margin-left: 18px;
+}
+
+.roadmap-list li{
+  margin-bottom: 6px;
+}
+
+/* ====== TESTING: REVIEWS PANEL ====== */
+.reviews-panel {
+  border: 1px solid #ece8ff;
+  background: #ffffff;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.review-card {
+  background: #faf8ff;
+  border: 2px solid #e6e6fa;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.review-meta {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 13px;
+  color: #5a4ea3;
+  background: #f3efff;
+  border: 1px solid #e6e6fa;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  color: #000;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.reviews-note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e6e6fa;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .reviews-grid { grid-template-columns: 1fr; }
+}
+
+
