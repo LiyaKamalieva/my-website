@@ -546,3 +546,83 @@ body.page2 .main-container {
   margin: 0 auto;
 }
 
+/* ===== Roadmap / Этапы разработки (в стиле сайта) ===== */
+.roadmap {
+  display: grid;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.roadmap-step {
+  background: #faf8ff;
+  border: 2px solid #e6e6fa;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.10);
+}
+
+.roadmap-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.roadmap-title {
+  font-weight: 800;
+  color: #000;
+  font-size: 16px;
+}
+
+.roadmap-dates {
+  font-size: 13px;
+  font-weight: 700;
+  color: #5a4ea3;
+  background: #f6f4ff;
+  border: 1px solid #dcd6f7;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.roadmap-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.meta-row {
+  display: grid;
+  gap: 6px;
+}
+
+.meta-label {
+  font-weight: 800;
+  color: #5a4ea3;
+  font-size: 13px;
+}
+
+.meta-text {
+  color: #000;
+  line-height: 1.55;
+}
+
+.meta-text ul {
+  margin-left: 18px;
+}
+
+.meta-text li {
+  margin-bottom: 6px;
+}
+
+/* чуть компактнее на телефоне */
+@media (max-width: 768px) {
+  .roadmap-step {
+    padding: 14px;
+  }
+  .roadmap-title {
+    font-size: 15px;
+  }
+}
+
