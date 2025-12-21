@@ -535,3 +535,14 @@ body {
   }
 }
 
+
+/* ===== FIX ДЛЯ ВТОРОЙ СТРАНИЦЫ ===== */
+body.page2 {
+  display: block;        /* отключаем flex */
+  min-height: auto;
+}
+
+body.page2 .main-container {
+  margin: 0 auto;
+}
+
