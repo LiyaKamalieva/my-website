@@ -1,11 +1,11 @@
-/* ===================== RESET ===================== */
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===================== BASE ===================== */
+/* ====== BASE ====== */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -15,7 +15,18 @@ body {
   padding: 20px;
 }
 
-/* ===================== LAYOUT ===================== */
+/* ВАЖНО: длинные страницы НЕ центрируем по вертикали, иначе “пропадает” начало */
+body.page2,
+body.page3 {
+  display: block;
+}
+
+body:not(.page2):not(.page3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-container {
   width: 100%;
   max-width: 900px;
@@ -25,279 +36,185 @@ body {
   gap: 30px;
 }
 
-/* ===================== PAGE 1 (главная) ===================== */
-.project-info {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-  backdrop-filter: blur(10px);
-}
-
-.project-title {
-  font-size: 34px;
-  margin-bottom: 14px;
-  font-weight: 800;
-}
-
-.project-description {
-  font-size: 16px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.auth-container {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-.auth-card {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  text-align: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.auth-icon {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 18px;
-  background: linear-gradient(135deg, #b19cd9 0%, #9370db 100%);
-  border-radius: 50%;
+/* ====== PAGE LINKS ====== */
+.page-links {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
 }
 
-.auth-card h2 {
-  margin-bottom: 8px;
-  font-size: 26px;
-  font-weight: 800;
-}
-
-.auth-subtitle {
-  margin-bottom: 22px;
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-.auth-form {
-  text-align: left;
-}
-
-.input-group {
-  margin-bottom: 16px;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 12px 14px;
-  border: 2px solid #e6e6fa;
-  border-radius: 10px;
-  font-size: 16px;
-  transition: all 0.2s;
+.page-link {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid #9370db;
+  border-radius: 50%;
+  transition: all 0.3s;
   background: #fff;
 }
 
-.input-group input:focus {
-  outline: none;
-  border-color: #9370db;
-  box-shadow: 0 0 0 3px rgba(147,112,219,0.12);
-}
-
-.login-btn {
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
+.page-link:hover {
+  background: #9370db;
   color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-top: 8px;
-}
-
-.login-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(147,112,219,0.35);
-}
-
-.auth-links {
-  margin-top: 16px;
-}
-
-.forgot-password {
-  color: #6b5bd6;
   text-decoration: none;
-  font-size: 14px;
+  transform: scale(1.1);
 }
 
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-/* ===================== PAGE HEADER (page2/page3) ===================== */
+/* ====== PAGE HEADER / WRAPPERS ====== */
 .page-header {
-  background: rgba(255, 255, 255, 0.92);
+  background: #fff;
   padding: 30px;
-  border-radius: 16px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-  backdrop-filter: blur(10px);
 }
 
 .page-title {
+  color: #000;
   font-size: 32px;
-  margin-bottom: 10px;
-  font-weight: 800;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .page-subtitle {
+  color: #000;
   font-size: 16px;
   max-width: 650px;
   margin: 0 auto;
   opacity: 0.9;
 }
 
-/* ===================== FIX ДЛЯ PAGE2: нормальная прокрутка ===================== */
-body.page2 {
-  display: block;        /* отключаем flex-центрирование */
-  min-height: 100vh;
-  padding: 20px;
-}
-
-body.page2 .main-container {
-  margin: 0 auto;
-}
-
-/* ===================== CONTENT WRAPPER / CARDS ===================== */
 .content-wrapper {
-  background: rgba(255, 255, 255, 0.96);
+  background: #fff;
   padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
+/* ====== SECTIONS / CARDS ====== */
 .content-section {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .section-title {
-  text-align: center;
+  color: #000;
   font-size: 28px;
-  margin-bottom: 18px;
-  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .info-card {
   background: #fff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  margin-bottom: 18px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  border: 1px solid rgba(147, 112, 219, 0.15);
 }
 
 .card-title {
+  color: #000;
   font-size: 20px;
-  margin-bottom: 12px;
-  font-weight: 800;
+  margin-bottom: 15px;
+  font-weight: 700;
   border-bottom: 2px solid #9370db;
   padding-bottom: 8px;
 }
 
+.card-content {
+  color: #000;
+}
+
 .card-content ul {
   margin-left: 20px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card-content li {
   margin-bottom: 8px;
 }
 
-/* ===================== IMAGES ===================== */
+/* ====== IMAGES GRID ====== */
 .screenshots-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
-  margin-top: 12px;
+  margin-top: 15px;
+  align-items: start;
 }
 
 .screenshot {
   width: 100%;
   height: auto;
-  display: block;
   object-fit: contain;
-  padding: 12px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 2px solid #e6e6fa;
-  transition: transform 0.2s, border-color 0.2s;
+  padding: 10px;
 }
 
-.screenshot:hover {
-  transform: scale(1.02);
-  border-color: #9370db;
-}
-
-/* ===================== SWOT (в оттенках сайта) ===================== */
-body.page2 .swot-grid {
+/* ====== SWOT (в оттенках сайта, без “радуги”) ====== */
+.swot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 10px;
 }
 
-body.page2 .swot-item {
-  background: #faf8ff;
-  border: 2px solid #e6e6fa;
+.swot-item {
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.10);
-  color: #000;
+  padding: 18px;
+  border: 2px solid #e6e6fa;
+  background: #faf8ff;
 }
 
-body.page2 .swot-item h4 {
-  color: #5a4ea3;
-  border-bottom: 1px solid #dcd6f7;
-  padding-bottom: 6px;
-  margin-bottom: 12px;
-  font-weight: 700;
+.swot-item h4 {
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: #4b3f93;
 }
 
-body.page2 .strength { background: #f6f4ff; border-left: 4px solid #9370db; }
-body.page2 .weakness { background: #fff4f7; border-left: 4px solid #b19cd9; }
-body.page2 .opportunity { background: #f4f8ff; border-left: 4px solid #9370db; }
-body.page2 .threat { background: #fff7f2; border-left: 4px solid #b19cd9; }
+.swot-item ul {
+  margin-left: 18px;
+}
 
-/* ===================== 4P ===================== */
+.swot-item li {
+  margin-bottom: 8px;
+}
+
+/* лёгкие различия, но в палитре сайта */
+.swot-strength { border-left: 6px solid #9370db; }
+.swot-weakness { border-left: 6px solid #b19cd9; }
+.swot-opportunity { border-left: 6px solid #7b68ee; }
+.swot-threat { border-left: 6px solid #a58ad8; }
+
+/* ====== 4P ====== */
 .p4-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .p4-item {
-  background: #fff;
-  border: 2px solid #e6e6fa;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.10);
+  border: 2px solid #e6e6fa;
+  background: #ffffff;
+  padding: 18px;
 }
 
 .p4-badge {
@@ -306,86 +223,321 @@ body.page2 .threat { background: #fff7f2; border-left: 4px solid #b19cd9; }
   border-radius: 999px;
   font-size: 12px;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
+  color: #4b3f93;
   background: #f6f4ff;
-  border: 1px solid #dcd6f7;
-  color: #5a4ea3;
+  border: 1px solid rgba(147, 112, 219, 0.25);
   margin-bottom: 10px;
 }
 
 .p4-item h4 {
-  margin-bottom: 10px;
-  font-weight: 700;
-  color: #000;
+  margin-bottom: 8px;
 }
 
-.p4-item p {
+/* ====== ROADMAP ====== */
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.roadmap-step {
+  border: 2px solid #e6e6fa;
+  background: #fbfaff;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.roadmap-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   margin-bottom: 10px;
 }
 
-.p4-item ul {
+.roadmap-title {
+  font-weight: 900;
+  color: #3f2f86;
+}
+
+.roadmap-dates {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px dashed rgba(147,112,219,0.35);
+}
+
+.meta-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.meta-label {
+  font-weight: 800;
+  color: #4b3f93;
+}
+
+.meta-text ul {
   margin-left: 18px;
 }
 
-.p4-item li {
-  margin-bottom: 8px;
-  line-height: 1.5;
+/* ====== REVIEWS ====== */
+.reviews-panel {
+  background: #fbfaff;
 }
 
-/* ===================== NAV BUTTONS ===================== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 2px solid #e6e6fa;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.review-meta {
+  font-weight: 900;
+  color: #3f2f86;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.review-text {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.reviews-note {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #3f2f86;
+}
+
+/* ====== STATS ====== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 2px solid #e6e6fa;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.stat-title {
+  font-weight: 900;
+  color: #3f2f86;
+  margin-bottom: 6px;
+}
+
+.stat-line {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.stat-hint {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ====== NAV BUTTONS ====== */
 .navigation-section {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-top: 18px;
-  margin-bottom: 10px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .nav-btn {
-  padding: 12px 24px;
+  padding: 12px 25px;
   background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
   color: #fff;
   text-decoration: none;
   border-radius: 10px;
-  font-weight: 900;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: 800;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
 .nav-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(147,112,219,0.35);
+  box-shadow: 0 5px 15px rgba(147, 112, 219, 0.35);
 }
 
 .logout-btn {
   background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .reviews-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .p4-grid { grid-template-columns: 1fr; }
+  .swot-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 768px) {
-  .content-wrapper {
-    padding: 20px;
-  }
+  .screenshots-grid { grid-template-columns: 1fr; }
+  .content-wrapper { padding: 20px; }
+  .page-title { font-size: 24px; }
+  .section-title { font-size: 22px; }
 
-  .page-title {
-    font-size: 26px;
-  }
-
-  .section-title {
-    font-size: 24px;
-  }
-
-  .screenshots-grid {
+  .meta-row {
     grid-template-columns: 1fr;
-  }
-
-  .navigation-section {
-    flex-direction: column;
-    align-items: center;
   }
 
   .nav-btn {
     width: 220px;
     text-align: center;
   }
+}
+/* ====== INDEX PAGE (главная) - вернуть нормальный вид ====== */
+
+body:not(.page2):not(.page3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-info {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.project-title {
+  color: #000;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.project-description {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.auth-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #b19cd9 0%, #9370db 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.auth-card h2 {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.auth-subtitle {
+  color: #000;
+  margin-bottom: 30px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.auth-form {
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e6e6fa;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background: #fff;
+  color: #000;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #9370db;
+  box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.1);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(147, 112, 219, 0.35);
+}
+
+.forgot-password {
+  color: #9370db;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
 }
