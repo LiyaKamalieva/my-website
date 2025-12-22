@@ -193,9 +193,9 @@ body:not(.page2):not(.page3) {
 .swot-item li { margin-bottom: 8px; }
 
 .swot-strength { border-left: 6px solid #9370db; }
-.swot-weakness { border-left: 6px solid #b19cd9; }
-.swot-opportunity { border-left: 6px solid #7b68ee; }
-.swot-threat { border-left: 6px solid #a58ad8; }
+.swot-weakness { border-left: 6px solid #c39cd9; }
+.swot-opportunity { border-left: 6px solid #f3afe5; }
+.swot-threat { border-left: 6px solid #ecaed4; }
 
 /* ====== 4P ====== */
 .p4-grid {
