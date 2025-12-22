@@ -1,510 +1,474 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница 2 - Полная информация о системе</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница 2 - Полная информация о системе</title>
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105010982', 'ym');
+  <!-- Cache-bust, чтобы GitHub Pages не показывал старый CSS -->
+  <link rel="stylesheet" href="css/style.css?v=7">
 
-        ym(105010982, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105010982" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
- 
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105010982', 'ym');
+
+    ym(105010982, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/105010982" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
+
 <body class="page2">
-    <script>
-        if (sessionStorage.getItem('authenticated') !== 'true') {
-            window.location.href = 'index.html';
-        }
-    </script>
+  <script>
+    if (sessionStorage.getItem('authenticated') !== 'true') {
+      window.location.href = 'index.html';
+    }
+  </script>
 
-    <div class="main-container">
-        <!-- Заголовок страницы в белом прямоугольнике -->
-        <div class="page-header">
-            <h1 class="page-title">Полная информация о системе</h1>
-            <p class="page-subtitle">
-                Детальное описание модуля "Планировщик задач" для мобильного приложения Т-Банк
-            </p>
-        </div>
-
-        <!-- Основной контент в белом прямоугольнике -->
-        <div class="content-wrapper">
-            <!-- Планирование -->
-            <div class="content-section">
-                <h2 class="section-title">Планирование</h2>
-                
-                <!-- Тема -->
-                <div class="info-card">
-                    <h3 class="card-title">Тема</h3>
-                    <div class="card-content">
-                        <p>Разработка модуля "Планировщик задач" в мобильном приложении Т-Банка с интеграцией партнерских сервисов и системой кэшбэка. Инновационное решение для автоматизации повседневных задач пользователей.</p>
-                    </div>
-                </div>
-
-                <!-- Цели -->
-                <div class="info-card">
-                    <h3 class="card-title">Цели</h3>
-                    <div class="card-content">
-                        <ul>
-                            <li>Повышение удобства и вовлеченности пользователей за счет индивидуального подхода</li>
-                            <li>Увеличение эффективности использования продуктов компании</li>
-                            <li>Создание персонализированных рекомендаций на основе автоматизации процессов</li>
-                            <li>Увеличение общего объема транзакций и вовлеченности в экосистему банка</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Задачи -->
-                <div class="info-card">
-                    <h3 class="card-title">Задачи</h3>
-                    <div class="card-content">
-                        <ul>
-                            <li>Создание интуитивного интерфейса для управления задачами</li>
-                            <li>Интеграция с API сервисов-партнеров (доставка, такси, билеты, отели)</li>
-                            <li>Разработка системы автоматического подбора релевантных сервисов</li>
-                            <li>Реализация механизма кэшбэка 5% за выполненные задачи</li>
-                            <li>Обеспечение безопасности и защиты пользовательских данных</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Целевая аудитория -->
-                <div class="info-card">
-                    <h3 class="card-title">Целевая аудитория</h3>
-                    <div class="card-content">
-                        <div class="screenshots-grid">
-                            <img src="1.jpg" class="screenshot" alt="Скриншот 1">
-                            <img src="2.jpg" class="screenshot" alt="Скриншот 2">
-                            <img src="3.jpg" class="screenshot" alt="Скриншот 3">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SWOT-анализ -->
-                <div class="info-card">
-                    <h3 class="card-title">SWOT-анализ</h3>
-                    <div class="card-content">
-                        <div class="swot-grid">
-                            <div class="swot-item strength">
-                                <h4>Сильные стороны</h4>
-                                <ul>
-                                    <li>Интеграция в экосистему банка</li>
-                                    <li>Большая база лояльных пользователей</li>
-                                    <li>Уникальное торговое предложение</li>
-                                </ul>
-                            </div>
-                            <div class="swot-item weakness">
-                                <h4>Слабые стороны</h4>
-                                <ul>
-                                    <li>Зависимость от партнеров</li>
-                                    <li>Риск нерелевантных рекомендаций</li>
-                                </ul>
-                            </div>
-                            <div class="swot-item opportunity">
-                                <h4>Возможности</h4>
-                                <ul>
-                                    <li>Расширение аудитории</li>
-                                    <li>Привлечение молодой аудитории</li>
-                                </ul>
-                            </div>
-                            <div class="swot-item threat">
-                                <h4>Угрозы</h4>
-                                <ul>
-                                    <li>Жесткая конкуренция на рынке</li>
-                                    <li>Крупные агрегаторы (Яндекс.Услуги, СберУслуги)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4P анализ -->
-                <div class="info-card">
-                    <h3 class="card-title">4P анализ</h3>
-                    <div class="card-content">
-                        <div class="p4-grid">
-
-                            <div class="p4-item">
-                                <span class="p4-badge">Product</span>
-                                <h4>Продукт</h4>
-                                <p><strong>Ядро продукта:</strong> умный планировщик задач, интегрированный в банковское приложение, который не только напоминает о делах, но и автоматически подбирает и предлагает услуги партнеров для их выполнения.</p>
-                                <ul>
-                                    <li>Создание и управление задачами (напоминания, дедлайны).</li>
-                                    <li>Автоматический подбор сервисов-партнеров (доставка, такси, авиабилеты, отели) на основе задач пользователя.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p4-item">
-                                <span class="p4-badge">Price</span>
-                                <h4>Цена</h4>
-                                <p><strong>Модель монетизации:</strong> основная цель — не прямая прибыль с пользователя, а увеличение общего объема транзакций и вовлеченности в экосистему банка.</p>
-                                <p><strong>Источники дохода:</strong></p>
-                                <ul>
-                                    <li>Комиссия от партнеров за каждого привлеченного через планировщик клиента.</li>
-                                    <li>Увеличение оборотов по картам Т-Банка за счет кэшбэка и стимуляции платежей.</li>
-                                    <li>Повышение лояльности: снижение оттока клиентов и стоимости удержания.</li>
-                                </ul>
-                                <p><strong>Ценность для клиента:</strong></p>
-                                <ul>
-                                    <li>Экономия денег: кэшбэк и подбор выгодных предложений.</li>
-                                    <li>Экономия времени: автоматизация поиска и бронирования услуг.</li>
-                                    <li>Удобство: финансы, планирование и заказы в одном приложении.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p4-item">
-                                <span class="p4-badge">Place</span>
-                                <h4>Место</h4>
-                                <p><strong>Канал распространения:</strong> встроенное решение внутри мобильного приложения Т-Банка.</p>
-                                <ul>
-                                    <li>Не нужно ничего отдельно скачивать или осваивать.</li>
-                                    <li>Все регионы присутствия Т-Банка с учетом локализации предложений партнеров.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p4-item">
-                                <span class="p4-badge">Promotion</span>
-                                <h4>Продвижение</h4>
-                                <p><strong>Внутриканальное:</strong></p>
-                                <ul>
-                                    <li>Пуш-уведомления: «Новый планировщик задач с кэшбэком до 5%».</li>
-                                    <li>Баннеры и рекомендации на главном экране приложения.</li>
-                                    <li>Email-рассылки и SMS-информирование клиентов банка.</li>
-                                </ul>
-                                <p><strong>Внешнее:</strong></p>
-                                <ul>
-                                    <li>Реклама в соцсетях (VK, Telegram) на аудиторию, похожую на текущих клиентов банка.</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            <!-- Этапы разработки и внедрения (из ТЗ) -->
-<div class="content-section">
-  <h2 class="section-title">Этапы разработки и внедрения</h2>
-
-  <div class="info-card">
-    <h3 class="card-title">План-график работ</h3>
-    <div class="card-content">
-
-      <div class="roadmap">
-
-        <!-- Этап 1 -->
-        <div class="roadmap-step">
-          <div class="roadmap-head">
-            <div class="roadmap-title">Этап 1: Разработка MVP (1–2 месяца)</div>
-            <div class="roadmap-dates">Запуск базового функционала</div>
-          </div>
-
-          <div class="roadmap-meta">
-            <div class="meta-row">
-              <div class="meta-label">Цель</div>
-              <div class="meta-text">
-                Запуск минимально жизнеспособного продукта с ключевыми возможностями для тестирования гипотез и сбора обратной связи.
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Детальные задачи</div>
-              <div class="meta-text">
-                <ul>
-                  <li><strong>Создание и управление задачами:</strong> поля (название, категория, срок), статусы (Новая/В процессе/Выполнена/Отменена), редактирование/удаление, список задач с фильтрами.</li>
-                  <li><strong>Интеграция с партнерами (пилот):</strong> подключение 2–3 партнеров (например, доставка/такси), подбор рекомендаций по категории, безопасные переходы, обработка ответов API.</li>
-                  <li><strong>Система кэшбэка 5%:</strong> расчет, интеграция с платежной системой, начисление бонусов, статусы начисления.</li>
-                  <li><strong>Базовые уведомления:</strong> push по статусам задач, уведомления о начислении кэшбэка, email-оповещения, интеграция с системой нотификаций.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Результат</div>
-              <div class="meta-text">
-                Рабочий прототип, готовый к тестированию на фокус-группе (100–200 пользователей).
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Этап 2 -->
-        <div class="roadmap-step">
-          <div class="roadmap-head">
-            <div class="roadmap-title">Этап 2: Расширение функциональности и интеграций (2–3 месяца)</div>
-            <div class="roadmap-dates">Больше партнеров и удобства</div>
-          </div>
-
-          <div class="roadmap-meta">
-            <div class="meta-row">
-              <div class="meta-label">Цель</div>
-              <div class="meta-text">
-                Расширить пул партнеров, улучшить пользовательский опыт и повысить вовлеченность.
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Детальные задачи</div>
-              <div class="meta-text">
-                <ul>
-                  <li><strong>Расширение партнеров:</strong> добавление сервисов доставки, авиабилетов, отелей, альтернативного такси, унифицированный протокол подключения новых партнеров.</li>
-                  <li><strong>UX улучшения:</strong> повторяющиеся задачи, приоритеты, прикрепление файлов, заметки/комментарии, теги.</li>
-                  <li><strong>Персонализация:</strong> улучшение рекомендаций (история поведения, предпочтения, рейтинги), A/B тестирование выдачи.</li>
-                  <li><strong>Аналитика:</strong> сбор статистики, дашборды эффективности партнеров, метрики вовлеченности, анализ конверсии воронки.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Результат</div>
-              <div class="meta-text">
-                Полнофункциональная система с расширенным набором партнеров и улучшенным UX, готовая к масштабированию.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Этап 3 -->
-        <div class="roadmap-step">
-          <div class="roadmap-head">
-            <div class="roadmap-title">Этап 3: Масштабирование и продвижение (3–4 месяца)</div>
-            <div class="roadmap-dates">Рост аудитории и эффект</div>
-          </div>
-
-          <div class="roadmap-meta">
-            <div class="meta-row">
-              <div class="meta-label">Цель</div>
-              <div class="meta-text">
-                Достичь плановых показателей по охвату аудитории и монетизации (через транзакции и партнеров).
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Детальные задачи</div>
-              <div class="meta-text">
-                <ul>
-                  <li><strong>Функционал для бизнес-пользователей:</strong> шаринг задач, делегирование, корпоративные задачи, интеграции с календарями.</li>
-                  <li><strong>Лояльность и геймификация:</strong> бейджи/ачивки, уровни, повышенный кэшбэк для активных пользователей, реферальная программа.</li>
-                  <li><strong>Интеграция в экосистему:</strong> кросс-продажи, единый кабинет, единый кэшбэк across продуктов банка.</li>
-                  <li><strong>Маркетинг:</strong> рекламные кампании внутри приложения, email-маркетинг, промо с партнерами, рефералки.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Результат</div>
-              <div class="meta-text">
-                Масштабированная система, интегрированная в экосистему и достигающая бизнес-показателей.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Этап 4 -->
-        <div class="roadmap-step">
-          <div class="roadmap-head">
-            <div class="roadmap-title">Этап 4: Поддержка и оптимизация (постоянно)</div>
-            <div class="roadmap-dates">Стабильность и улучшения</div>
-          </div>
-
-          <div class="roadmap-meta">
-            <div class="meta-row">
-              <div class="meta-label">Цель</div>
-              <div class="meta-text">
-                Поддерживать стабильную работу системы и улучшать ее на основе данных и обратной связи.
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Детальные задачи</div>
-              <div class="meta-text">
-                <ul>
-                  <li>Регулярные обновления и поддержка функционала.</li>
-                  <li>Мониторинг и оптимизация производительности.</li>
-                  <li>Анализ пользовательской обратной связи и доработка.</li>
-                  <li>Подключение новых партнеров и расширение географии.</li>
-                  <li>A/B тесты для оптимизации конверсии и вовлеченности.</li>
-                  <li>Обновление безопасности и соответствие требованиям регуляторов.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="meta-row">
-              <div class="meta-label">Результат</div>
-              <div class="meta-text">
-                Постоянное улучшение продукта, стабильность и безопасность на уровне требований.
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /roadmap -->
-       <!-- UML диаграммы разработки -->
-<div class="info-card">
-    <h3 class="card-title">UML-диаграммы системы</h3>
-    <div class="card-content">
-
-        <p><strong>Диаграмма use-case</strong> Описывает функциональные возможности системы и сценарии взаимодействия пользователей с модулем планировщика задач. Диаграмма используется для фиксации требований к системе и определения ролей пользователей на этапе планирования.</p>
-        <img src="use-case.png" class="screenshot" alt="Диаграмма классов">
-
-        <p><strong>Диаграмма состояний</strong> Отражает жизненный цикл задачи и возможные состояния объекта в системе, а также условия перехода между ними. Используется для проектирования логики обработки задач и предотвращения некорректных сценариев.</p>
-        <img src="sostoyaniy.png" class="screenshot" alt="Диаграмма компонентов">
-
-        <p><strong>Диаграмма деятельности</strong> Описывает функциональные возможности системы и сценарии взаимодействия пользователей с модулем планировщика задач. Диаграмма используется для фиксации требований к системе и определения ролей пользователей на этапе планирования.</p>
-        <img src="diagram_deyatelnostey.png" class="screenshot" alt="Диаграмма деятельности">
-
+  <div class="main-container">
+    <div class="page-header">
+      <h1 class="page-title">Полная информация о системе</h1>
+      <p class="page-subtitle">Детальное описание модуля "Планировщик задач" для мобильного приложения Т-Банк</p>
     </div>
-</div>
 
-    </div>
-  </div>
-</div>
+    <div class="content-wrapper">
 
+      <!-- ===================== ПЛАНИРОВАНИЕ ===================== -->
+      <div class="content-section">
+        <h2 class="section-title">Планирование</h2>
 
-            <!-- Раздел разработка -->
-            <div class="content-section">
-                <h2 class="section-title">Разработка</h2>
-                
-                <div class="info-card">
-                    <div class="card-content">
-                        <p><strong>Технологический стек:</strong></p>
-                        <ul>
-                            <li>Frontend: React Native</li>
-                            <li>Backend: Java Spring</li>
-                            <li>База данных: PostgreSQL 14+</li>
-                            <li>Архитектура: Микросервисная</li>
-                            <li>API: RESTful</li>
-                        </ul>
-                        
-                        <p><strong>Основные модули:</strong></p>
-                        <ul>
-                            <li>Модуль управления задачами</li>
-                            <li>Модуль интеграции с партнерами</li>
-                            <li>Модуль кэшбэка</li>
-                            <li>Модуль уведомлений</li>
-                            <li>Модуль администратора</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UML диаграммы разработки -->
-<div class="info-card">
-    <h3 class="card-title">UML-диаграммы системы</h3>
-    <div class="card-content">
-
-        <p><strong>Диаграмма классов</strong> Описывает структуру системы, основные классы, их атрибуты, методы и связи между ними. Диаграмма используется при проектировании программной архитектуры и реализации бизнес-логики системы.</p>
-        <img src="klass.png" class="screenshot" alt="Диаграмма классов">
-
-        <p><strong>Диаграмма компонентов</strong> Демонстрирует архитектуру системы на уровне компонентов, их интерфейсы и взаимодействие между модулями. Позволяет определить распределение функциональности и точки интеграции внутри системы.</p>
-        <img src="diagram_komponent.png" class="screenshot" alt="Диаграмма компонентов">
-
-        <p><strong>Диаграмма пакетов</strong> Демонстрирует архитектуру системы на уровне компонентов, их интерфейсы и взаимодействие между модулями. Позволяет определить распределение функциональности и точки интеграции внутри системы.</p>
-        <img src="pack.png" class="screenshot" alt="Диаграмма деятельности">
-
-    </div>
-</div>
-
-
-            <!-- Раздел тестирование -->
-<div class="content-section">
-    <h2 class="section-title">Тестирование</h2>
-
-    <!-- Общее описание тестирования -->
-    <div class="info-card">
-        <h3 class="card-title">Общие результаты</h3>
-        <div class="card-content">
+        <div class="info-card">
+          <h3 class="card-title">Тема</h3>
+          <div class="card-content">
             <p>
-                В рамках разработки прототипа было проведено ручное функциональное тестирование и сбор пользовательских отзывов.
-                Основное внимание уделялось корректности навигации, доступу к страницам после авторизации, отображению контента
-                (изображения/файлы) и отсутствию ошибок в консоли.
+              Разработка модуля "Планировщик задач" в мобильном приложении Т-Банка с интеграцией партнерских сервисов и системой кэшбэка.
+              Решение автоматизирует повседневные задачи пользователя и помогает выполнять их через экосистему банка.
             </p>
+          </div>
         </div>
-    </div>
 
-    <!-- Сценарии -->
-    <div class="info-card">
-        <h3 class="card-title">Сценарии проверки</h3>
-        <div class="card-content">
+        <div class="info-card">
+          <h3 class="card-title">Цели</h3>
+          <div class="card-content">
             <ul>
-                <li>Авторизация на главной странице → проверка корректности ввода данных</li>
-                <li>Переход на страницу с полной информацией (info) → проверка отображения разделов</li>
-                <li>Переход в архив → открытие/скачивание файлов (диаграммы, материалы)</li>
-                <li>Выход из аккаунта → проверка ограничения доступа к защищённым страницам</li>
+              <li>Повышение удобства и вовлеченности пользователей за счет персонального сценария планирования</li>
+              <li>Увеличение эффективности использования продуктов компании</li>
+              <li>Персонализированные рекомендации за счет автоматизации и подбора партнерских сервисов</li>
+              <li>Рост транзакций и вовлеченности в экосистему банка</li>
             </ul>
+          </div>
         </div>
-    </div>
 
-    <!-- Console / Performance / Lighthouse -->
-    <div class="info-card">
-        <h3 class="card-title">Консоль и производительность</h3>
-        <div class="card-content">
+        <div class="info-card">
+          <h3 class="card-title">Задачи</h3>
+          <div class="card-content">
             <ul>
-                <li><strong>Console:</strong> после проверки ошибок JavaScript не выявлено.</li>
-                <li><strong>Performance:</strong> главная страница лёгкая (почти без медиа), страницы info/archive тяжелее из-за медиа и файлов, но работают стабильно.</li>
-                <li><strong>Lighthouse:</strong> страницы получили высокие оценки по ключевым метрикам.</li>
+              <li>Создание интуитивного интерфейса для управления задачами</li>
+              <li>Интеграция с API сервисов-партнеров (доставка, такси, билеты, отели)</li>
+              <li>Разработка автоматического подбора релевантных сервисов под задачу</li>
+              <li>Реализация кэшбэка до 5% за выполнение задач/заказы</li>
+              <li>Безопасность и защита пользовательских данных</li>
             </ul>
+          </div>
         </div>
-    </div>
 
-    <!-- ОБОБЩЁННЫЕ отзывы -->
-    <div class="info-card">
-        <h3 class="card-title">Пользовательские отзывы</h3>
-        <div class="card-content">
+        <div class="info-card">
+          <h3 class="card-title">Целевая аудитория</h3>
+          <div class="card-content">
+            <div class="screenshots-grid">
+              <img src="1.jpg" class="screenshot" alt="ЦА 1">
+              <img src="2.jpg" class="screenshot" alt="ЦА 2">
+              <img src="3.jpg" class="screenshot" alt="ЦА 3">
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">SWOT-анализ</h3>
+          <div class="card-content">
+            <div class="swot-grid">
+              <div class="swot-item swot-strength">
+                <h4>Сильные стороны</h4>
+                <ul>
+                  <li>Интеграция в экосистему банка</li>
+                  <li>Большая база лояльных пользователей</li>
+                  <li>Уникальное торговое предложение: планирование + подбор услуг + кэшбэк</li>
+                </ul>
+              </div>
+
+              <div class="swot-item swot-weakness">
+                <h4>Слабые стороны</h4>
+                <ul>
+                  <li>Высокая зависимость от качества и стабильности партнеров</li>
+                  <li>Риск нерелевантных рекомендаций, если алгоритм подбора работает плохо</li>
+                </ul>
+              </div>
+
+              <div class="swot-item swot-opportunity">
+                <h4>Возможности</h4>
+                <ul>
+                  <li>Расширение аудитории через полезный повседневный инструмент</li>
+                  <li>Привлечение молодых пользователей (студенты и молодые специалисты)</li>
+                </ul>
+              </div>
+
+              <div class="swot-item swot-threat">
+                <h4>Угрозы</h4>
+                <ul>
+                  <li>Жесткая конкуренция на рынке (планировщики, агрегаторы услуг)</li>
+                  <li>Репутационные риски при сбоях партнеров</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">4P анализ</h3>
+          <div class="card-content">
+            <div class="p4-grid">
+
+              <div class="p4-item">
+                <span class="p4-badge">PRODUCT</span>
+                <h4>Продукт</h4>
+                <p><strong>Ядро:</strong> умный планировщик задач в приложении банка, который не только напоминает, но и предлагает партнерские сервисы для выполнения задач.</p>
+                <ul>
+                  <li>Создание и управление задачами (напоминания, дедлайны)</li>
+                  <li>Автоподбор партнеров (доставка, такси, авиабилеты, отели) под задачу</li>
+                </ul>
+              </div>
+
+              <div class="p4-item">
+                <span class="p4-badge">PRICE</span>
+                <h4>Цена</h4>
+                <p><strong>Модель:</strong> цель не прямая платность, а рост транзакций и вовлеченности в экосистему банка.</p>
+                <p><strong>Доход:</strong></p>
+                <ul>
+                  <li>Комиссия от партнеров за привлеченных клиентов</li>
+                  <li>Рост оборотов по картам через стимулы и кэшбэк</li>
+                  <li>Снижение оттока: сервис “вшит” в повседневность</li>
+                </ul>
+                <p><strong>Ценность:</strong> экономия денег (кэшбэк), времени (автоматизация), удобство (все в одном приложении).</p>
+              </div>
+
+              <div class="p4-item">
+                <span class="p4-badge">PLACE</span>
+                <h4>Место</h4>
+                <p><strong>Канал:</strong> встроено в мобильное приложение Т-Банка.</p>
+                <ul>
+                  <li>Ничего не нужно скачивать отдельно</li>
+                  <li>Работа во всех регионах присутствия банка с локализацией предложений партнеров</li>
+                </ul>
+              </div>
+
+              <div class="p4-item">
+                <span class="p4-badge">PROMOTION</span>
+                <h4>Продвижение</h4>
+                <p><strong>Внутри приложения:</strong></p>
+                <ul>
+                  <li>Пуш-уведомления “Новый планировщик с кэшбэком до 5%”</li>
+                  <li>Баннеры/рекомендации на главном экране</li>
+                  <li>Email/SMS информирование</li>
+                </ul>
+                <p><strong>Внешнее:</strong> реклама в соцсетях (VK, Telegram) на аудиторию, похожую на клиентов банка.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">UML-диаграммы для планирования (требования и сценарии)</h3>
+          <div class="card-content">
+            <p><strong>Use-case диаграмма</strong> показывает участников (пользователь/партнерские сервисы/банк) и сценарии: создание задачи, получение рекомендаций, оформление заказа, начисление кэшбэка.</p>
+            <img src="usecase.png" class="screenshot" alt="Use-case">
+
+            <p><strong>Диаграмма состояний</strong> фиксирует жизненный цикл задачи (Новая → В процессе → Выполнена/Отменена) и условия переходов. Это помогает не допустить “сломанных” сценариев.</p>
+            <img src="sostoyaniy.png" class="screenshot" alt="States">
+
+            <p><strong>Диаграмма деятельности</strong> описывает поток действий пользователя: постановка задачи → подбор сервиса → подтверждение → выполнение → начисление кэшбэка.</p>
+            <img src="diagram_deyatelnostey.png" class="screenshot" alt="Activity">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== РАЗРАБОТКА ===================== -->
+      <div class="content-section">
+        <h2 class="section-title">Разработка</h2>
+
+        <div class="info-card">
+          <h3 class="card-title">Технологический стек и модули</h3>
+          <div class="card-content">
+            <p><strong>Технологический стек:</strong></p>
             <ul>
-                <li><strong>Плюсы:</strong> приятная цветовая схема, аккуратный дизайн, понятная форма авторизации, навигация в целом интуитивная.</li>
-                <li><strong>Минусы:</strong> местами мелкий текст, хочется больше контраста у кнопок, ссылка «Забыли пароль?» вызывает ожидание, но не даёт результата.</li>
-                <li><strong>Точки улучшения:</strong> увеличить читаемость (размер/контраст), добавить валидацию email и требования к паролю, сделать поведение после входа более очевидным.</li>
+              <li>Frontend: React Native</li>
+              <li>Backend: Java Spring</li>
+              <li>База данных: PostgreSQL 14+</li>
+              <li>Архитектура: микросервисная</li>
+              <li>API: REST</li>
             </ul>
+
+            <p><strong>Основные модули:</strong></p>
+            <ul>
+              <li>Управление задачами</li>
+              <li>Интеграция с партнерами</li>
+              <li>Кэшбэк</li>
+              <li>Уведомления</li>
+              <li>Администрирование</li>
+            </ul>
+          </div>
         </div>
-    </div>
 
-    <!-- РЕАЛЬНЫЕ отзывы: отдельная плашка -->
-    <div class="info-card reviews-panel">
-        <h3 class="card-title">Отзывы пользователей</h3>
+        <div class="info-card">
+          <h3 class="card-title">UML-диаграммы для разработки (архитектура и структура)</h3>
+          <div class="card-content">
+            <p><strong>Диаграмма классов</strong> показывает сущности (User/Task/Notification/PartnerService/Cashback), их поля и методы, а также связи между объектами.</p>
+            <img src="class.png" class="screenshot" alt="Class diagram">
 
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-meta">Женщина, 53 года</div>
-                <div class="review-text">
-                    «Дизайн красивый, розово-сиреневый очень нежный, но буквы мелковаты… хотелось бы, чтобы кнопки были побольше и контрастнее».
+            <p><strong>Диаграмма компонентов</strong> отражает состав модулей и их взаимодействие: UI → сервис задач → сервис партнеров → сервис кэшбэка → нотификации.</p>
+            <img src="components.png" class="screenshot" alt="Components diagram">
+
+            <p><strong>Диаграмма пакетов</strong> группирует код по подсистемам и помогает удерживать структуру проекта аккуратной (а не как обычно бывает).</p>
+            <img src="packages.png" class="screenshot" alt="Packages diagram">
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">План-график разработки и внедрения (из ТЗ)</h3>
+          <div class="card-content">
+            <div class="roadmap">
+
+              <div class="roadmap-step">
+                <div class="roadmap-head">
+                  <div class="roadmap-title">Этап 1: Разработка MVP (1–2 месяца)</div>
+                  <div class="roadmap-dates">Базовый функционал + пилот партнеров</div>
                 </div>
+                <div class="meta-row">
+                  <div class="meta-label">Фокус</div>
+                  <div class="meta-text">Создание задач, пилот интеграций (2–3 партнера), расчет/начисление кэшбэка, базовые уведомления.</div>
+                </div>
+                <div class="meta-row">
+                  <div class="meta-label">Результат</div>
+                  <div class="meta-text">Прототип для тестирования на фокус-группе (100–200 пользователей).</div>
+                </div>
+              </div>
+
+              <div class="roadmap-step">
+                <div class="roadmap-head">
+                  <div class="roadmap-title">Этап 2: Расширение функциональности (2–3 месяца)</div>
+                  <div class="roadmap-dates">Больше интеграций + лучше UX</div>
+                </div>
+                <div class="meta-row">
+                  <div class="meta-label">Фокус</div>
+                  <div class="meta-text">Новые партнеры, повторяющиеся задачи/приоритеты/теги, улучшение рекомендаций, аналитика.</div>
+                </div>
+                <div class="meta-row">
+                  <div class="meta-label">Результат</div>
+                  <div class="meta-text">Система готова к масштабированию.</div>
+                </div>
+              </div>
+
+              <div class="roadmap-step">
+                <div class="roadmap-head">
+                  <div class="roadmap-title">Этап 3: Масштабирование и продвижение (3–4 месяца)</div>
+                  <div class="roadmap-dates">Рост аудитории и метрик</div>
+                </div>
+                <div class="meta-row">
+                  <div class="meta-label">Фокус</div>
+                  <div class="meta-text">Фичи для бизнес-пользователей, геймификация/лояльность, продвижение с партнерами.</div>
+                </div>
+                <div class="meta-row">
+                  <div class="meta-label">Результат</div>
+                  <div class="meta-text">Стабильный рост вовлеченности и транзакций.</div>
+                </div>
+              </div>
+
+              <div class="roadmap-step">
+                <div class="roadmap-head">
+                  <div class="roadmap-title">Этап 4: Поддержка и оптимизация (постоянно)</div>
+                  <div class="roadmap-dates">Стабильность, безопасность, улучшения</div>
+                </div>
+                <div class="meta-row">
+                  <div class="meta-label">Фокус</div>
+                  <div class="meta-text">Мониторинг, улучшения по данным, A/B-тесты, новые партнеры, обновления безопасности.</div>
+                </div>
+                <div class="meta-row">
+                  <div class="meta-label">Результат</div>
+                  <div class="meta-text">Постоянное улучшение продукта и качества сервиса.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== ТЕСТИРОВАНИЕ ===================== -->
+      <div class="content-section">
+        <h2 class="section-title">Тестирование</h2>
+
+        <div class="info-card">
+          <h3 class="card-title">Сценарии проверки</h3>
+          <div class="card-content">
+            <ul>
+              <li>Авторизация на главной → проверка корректности ввода</li>
+              <li>Переход на страницу info → проверка отображения всех разделов</li>
+              <li>Переход в архив → открытие/скачивание файлов</li>
+              <li>Выход из аккаунта → проверка ограничения доступа к защищенным страницам</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">Результаты (обобщение)</h3>
+          <div class="card-content">
+            <ul>
+              <li><strong>Ручное тестирование:</strong> навигация и логика входа работают, критических сбоев не выявлено.</li>
+              <li><strong>Консоль:</strong> после проверки ошибок не выявлено.</li>
+              <li><strong>Performance:</strong> главная страница легкая, info/archive тяжелее из-за медиа и файлов, но работают стабильно.</li>
+              <li><strong>Lighthouse:</strong> страницы получили высокие оценки по ключевым метрикам.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card reviews-panel">
+          <h3 class="card-title">Отзывы пользователей (из отчёта)</h3>
+
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="review-meta">Женщина, 53 года</div>
+              <div class="review-text">
+                «Дизайн красивый, розово-сиреневый очень нежный, но буквы мелковаты… хотелось бы, чтобы все кнопки были побольше и контрастнее».
+              </div>
             </div>
 
             <div class="review-card">
-                <div class="review-meta">Подросток, 17 лет</div>
-                <div class="review-text">
-                    «Хороший дизайн! Авторизация простая… но нажала “Забыли пароль?” и ссылка не работает. Это немного разочаровало».
-                </div>
+              <div class="review-meta">Подросток, 17 лет</div>
+              <div class="review-text">
+                «Хороший дизайн! Авторизация простая… но нажала “Забыли пароль?” и оказалось, что ссылка не работает. Это немного разочаровало».
+              </div>
             </div>
 
             <div class="review-card">
-                <div class="review-meta">Студент, 20 лет</div>
-                <div class="review-text">
-                    «Форма авторизации логичная… но есть технические недочёты: нет валидации email, нет требования к сложности пароля, после авторизации нет явного перенаправления».
-                </div>
+              <div class="review-meta">Студент, 20 лет</div>
+              <div class="review-text">
+                «Есть технические недочёты: отсутствует валидация email, нет требований к сложности пароля, после авторизации нет явного перенаправления».
+              </div>
             </div>
-        </div>
+          </div>
 
-        <div class="card-content">
+          <div class="card-content">
             <p class="reviews-note">
-                Вывод: прототип выполняет основные функции, но требует улучшений UX (читаемость и контраст) и базовых проверок ввода (валидация email/пароля).
+              Вывод: прототип работает, но надо улучшить UX (контраст/размеры) и добавить базовую валидацию (email/пароль) + понятное поведение после входа.
             </p>
+          </div>
         </div>
-    </div>
-</div>
 
-      <!-- ===================== /ВНЕДРЕНИЕ ===================== -->
+        <div class="info-card">
+          <h3 class="card-title">UML-диаграммы для тестирования (проверка поведения)</h3>
+          <div class="card-content">
+            <p><strong>Диаграмма последовательностей</strong> помогает проверять корректность обмена сообщениями: пользователь → система → партнер → начисление кэшбэка.</p>
+            <img src="sequence.png" class="screenshot" alt="Sequence diagram">
+
+            <p><strong>Временная диаграмма</strong> полезна для тестов дедлайнов/напоминаний и задержек уведомлений (время реакции системы).</p>
+            <img src="timing.png" class="screenshot" alt="Timing diagram">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== РЕАЛИЗАЦИЯ + СТАТИСТИКА ===================== -->
+      <div class="content-section">
+        <h2 class="section-title">Реализация + статистика</h2>
+
+        <div class="info-card">
+          <h3 class="card-title">Текущее состояние</h3>
+          <div class="card-content">
+            <p>
+              Сайт-витрина уже реализован: страницы оформлены, логика авторизации и навигации работает, материалы (диаграммы/архив) подключены.
+              Сам продукт (модуль внутри приложения банка) требует полной разработки backend/мобильной части и интеграций.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">Network (пример измерений)</h3>
+          <div class="card-content">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-title">index.html</div>
+                <div class="stat-line">≈ 500–700 мс</div>
+                <div class="stat-line">≈ 30–80 KB</div>
+                <div class="stat-hint">Легкая страница, почти без медиа</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-title">page2.html</div>
+                <div class="stat-line">≈ 450–900 мс</div>
+                <div class="stat-line">≈ 80–150 KB (без картинок) / до ~1–2 MB (с диаграммами)</div>
+                <div class="stat-hint">Основной вес дают диаграммы/изображения</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-title">page3.html (архив)</div>
+                <div class="stat-line">≈ 400–800 мс</div>
+                <div class="stat-line">Зависит от файлов архива</div>
+                <div class="stat-hint">Кэширование сильно снижает повторные загрузки</div>
+              </div>
+            </div>
+
+            <p style="margin-top:12px; font-size: 13px; opacity: 0.85;">
+              Примечание: сильнее всего “раздувает” страницу медиа (изображения диаграмм). Если включено кеширование, повторная загрузка заметно быстрее.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">UML-диаграммы для реализации </h3>
+          <div class="card-content">
+            <p><strong>Диаграмма развертывания</strong> показывает, где живут компоненты: клиент (mobile), backend, база данных, внешние партнерские API.</p>
+            <img src="deployment.png" class="screenshot" alt="Deployment diagram">
+
+            <p><strong>Диаграмма объектов</strong> помогает отразить пример “снимка” данных (конкретный пользователь, задача, начисление кэшбэка).</p>
+            <img src="objects.png" class="screenshot" alt="Objects diagram">
+
+            <p><strong>Диаграмма композитной структуры</strong> визуализирует внутреннюю структуру сложных компонентов и их “внутренности”.</p>
+            <img src="composite.png" class="screenshot" alt="Composite diagram">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== ВНЕДРЕНИЕ ===================== -->
+      <div class="content-section">
+        <h2 class="section-title">Внедрение</h2>
+
+        <div class="info-card">
+          <h3 class="card-title">План внедрения</h3>
+          <div class="card-content">
+            <ul>
+              <li><strong>Этап 1 (1–2 месяца):</strong> MVP и пилот партнеров</li>
+              <li><strong>Этап 2 (2–3 месяца):</strong> расширение функциональности и интеграций</li>
+              <li><strong>Этап 3 (3–4 месяца):</strong> масштабирование и продвижение</li>
+              <li><strong>Этап 4 (постоянно):</strong> поддержка и оптимизация</li>
+            </ul>
+
+            <p><strong>Пилотное внедрение:</strong></p>
+            <ul>
+              <li>Тестирование на фокус-группе 100–200 пользователей</li>
+              <li>Интеграция с 2–3 ключевыми партнерами</li>
+              <li>Сбор обратной связи и доработка</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
     </div><!-- /content-wrapper -->
 
@@ -521,24 +485,5 @@
       window.location.href = 'index.html';
     }
   </script>
-</body>
-</html>
-
-            </div>
-        </div> <!-- Закрытие content-wrapper -->
-
-        <!-- Навигация -->
-        <div class="navigation-section">
-            <a href="index.html" class="nav-btn">На главную</a>
-            <a href="#" onclick="logout()" class="nav-btn logout-btn">Выйти</a>
-        </div>
-    </div> <!-- Закрытие main-container -->
-
-    <script>
-        function logout() {
-            sessionStorage.removeItem('authenticated');
-            window.location.href = 'index.html';
-        }
-    </script>
 </body>
 </html>
