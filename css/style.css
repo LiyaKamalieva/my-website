@@ -629,3 +629,17 @@ body:not(.page2):not(.page3) {
     width: fit-content;
   }
 }
+/* ===== FIX NAV BUTTONS (page2 / page3) ===== */
+.navigation-section {
+  position: relative;
+  z-index: 10; /* поверх контента */
+}
+
+.nav-btn {
+  position: relative;
+  z-index: 11;
+
+  pointer-events: auto; /* ВАЖНО */
+  cursor: pointer;
+  text-decoration: none;
+}
