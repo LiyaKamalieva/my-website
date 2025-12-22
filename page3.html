@@ -1,57 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница 3 - Архитектура</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница 3 - Архив файлов</title>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+  <!-- cache-bust чтобы GitHub Pages не держал старый CSS -->
+  <link rel="stylesheet" href="css/style.css?v=9">
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105010982', 'ym');
 
     ym(105010982, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/105010982" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
- 
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/105010982" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
-<body>
-    <script>
-        
-        if (sessionStorage.getItem('authenticated') !== 'true') {
-            window.location.href = 'index.html';
-        }
-    </script>
 
-    <header>
-        <h1>Страница 3 - Архитектура</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="#" onclick="logout()">Выйти</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="page3">
+  <script>
+    if (sessionStorage.getItem('authenticated') !== 'true') {
+      window.location.href = 'index.html';
+    }
+  </script>
 
-    <main>
-        <section>
-            <h2>Архитектура системы</h2>
-            <!-- Ваш контент здесь -->
-        </section>
-    </main>
+  <div class="main-container">
+    <div class="page-header">
+      <h1 class="page-title">Архив файлов</h1>
+      <p class="page-subtitle">
+        Полный набор документов и UML-диаграмм по проекту “Планировщик задач в приложении Т-Банк”.
+      </p>
+    </div>
 
-    <script>
-        function logout() {
+    <div class="content-wrapper">
+
+      <!-- ===================== ДОКУМЕНТЫ ===================== -->
+      <div class="content-section archive-section">
+        <h2 class="section-title">Документы</h2>
+
+        <div class="file-list">
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">ТЗ.docx</div>
+              <div class="file-meta">Документ · Техническое задание</div>
+            </div>
+            <div class="file-size">—</div>
+            <div class="file-date">—</div>
+            <a class="file-btn" href="TZ.docx" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Планировщик_задач.pdf</div>
+              <div class="file-meta">Документ · Отчёт/описание проекта</div>
+            </div>
+            <div class="file-size">—</div>
+            <div class="file-date">—</div>
+            <a class="file-btn" href="planner_report.pdf" download>Скачать</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===================== ДИАГРАММЫ ===================== -->
+      <div class="content-section archive-section">
+        <h2 class="section-title">Диаграммы</h2>
+
+        <div class="file-list">
+
+          <!-- Планирование -->
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">use-case.png</div>
+              <div class="file-meta">Диаграмма · Use-case (сценарии и акторы)</div>
+            </div>
+            <div class="file-size">—</div>
+            <div class="file-date">—</div>
+            <a class="file-btn" href="use-case.png" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Диаграмма_состояний.png</div>
+              <div class="file-meta">Диаграмма · Состояния </div>
+            </div>
             
-            sessionStorage.removeItem('authenticated');
-            window.location.href = 'index.html';
-        }
-    </script>
+            <a class="file-btn" href="sostoyaniy.png" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Диаграмма_деятельностей.png</div>
+              <div class="file-meta">Диаграмма · Деятельности </div>
+            </div>
+            <a class="file-btn" href="diagram_deyatelnostey.png" download>Скачать</a>
+          </div>
+
+          <!-- Разработка -->
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Диаграмма_классов_проект.png</div>
+              <div class="file-meta">Диаграмма · Классы </div>
+            </div>
+            <a class="file-btn" href="class.png" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">components.png</div>
+              <div class="file-meta">Диаграмма · Компоненты </div>
+            </div>
+            <a class="file-btn" href="components.pdf" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Диаграмма_пакетов.pdf</div>
+              <div class="file-meta">Диаграмма · Пакеты </div>
+            </div>
+            <a class="file-btn" href="packages.png" download>Скачать</a>
+          </div>
+
+          <!-- Тестирование -->
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Диаграмма_последовательностей.png</div>
+              <div class="file-meta">Диаграмма · Последовательностей</div>
+            </div>
+            <a class="file-btn" href="sequence.png" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Временная_диаграмма.png</div>
+              <div class="file-meta">Диаграмма · Временная</div>
+            </div>
+            <a class="file-btn" href="timing.png" download>Скачать</a>
+          </div>
+
+          <!-- Реализация / внедрение -->
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">диаграмма_развертывания.png</div>
+              <div class="file-meta">Диаграмма · Развёртывание</div>
+            </div>
+            <a class="file-btn" href="deployment.png" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Диаграмма_объектов_т-банк.png</div>
+              <div class="file-meta">Диаграмма · Объекты </div>
+            </div>
+            <a class="file-btn" href="objects.png" download>Скачать</a>
+          </div>
+
+          <div class="file-row">
+            <div class="file-main">
+              <div class="file-name">Диаграмма_композитной_структуры.pdf</div>
+              <div class="file-meta">Диаграмма · Композитная структура </div>
+            </div>
+            <a class="file-btn" href="composite.pdf" download>Скачать</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /content-wrapper -->
+
+    <div class="navigation-section">
+      <a href="index.html" class="nav-btn">На главную</a>
+      <a href="page2.html" class="nav-btn">Информация</a>
+      <a href="#" onclick="logout()" class="nav-btn logout-btn">Выйти</a>
+    </div>
+  </div><!-- /main-container -->
+
+  <script>
+    function logout() {
+      sessionStorage.removeItem('authenticated');
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>
